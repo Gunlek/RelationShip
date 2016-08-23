@@ -1,5 +1,6 @@
 # RelationShip
 ### Développé par Fabien Aubret, [SimpleDuino](http://simple-duino.com), pour [NativGaming](http://nativgaming.com)
+### Spigot 1.8.8
 
 ## Description
 RelationShip permet la mise en place d'un système complet d'amis et de party multiserveurs. Ainsi, le plugin ajoute les commandes suivantes:
