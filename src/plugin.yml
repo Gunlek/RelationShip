@@ -1,0 +1,11 @@
+author: Gunlek
+version: 1.0.1
+name: Relationship
+main: com.simpleduino.Relationship.RelationshipPlugin
+commands:
+  party:
+    description: Create your own party to play with your friends
+    aliases: [p, partie]
+  friends:
+    description: Manage your friends
+    aliases: [f, friend, ami, amis]
