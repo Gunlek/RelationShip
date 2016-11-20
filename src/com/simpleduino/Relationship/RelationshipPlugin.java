@@ -26,19 +26,6 @@ public class RelationshipPlugin extends JavaPlugin {
 
     public void onEnable()
     {
-        this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
-        this.getServer().getPluginManager().registerEvents(new ServerListener(), this);
-        this.getServer().getPluginManager().registerEvents(new FriendsListener(), this);
-
-        this.getCommand("friends").setExecutor(new FriendCommands());
-        this.getCommand("f").setExecutor(new FriendCommands());
-        this.getCommand("friend").setExecutor(new FriendCommands());
-        this.getCommand("ami").setExecutor(new FriendCommands());
-        this.getCommand("amis").setExecutor(new FriendCommands());
-
-        this.getCommand("party").setExecutor(new PartyCommands());
-        this.getCommand("p").setExecutor(new PartyCommands());
-        this.getCommand("partie").setExecutor(new PartyCommands());
 
         File cfgFile = new File("plugins/Relationship/config.yml");
         if(!cfgFile.exists()) {
@@ -59,6 +46,20 @@ public class RelationshipPlugin extends JavaPlugin {
                 e.printStackTrace();
             }
         }
+
+        this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+        this.getServer().getPluginManager().registerEvents(new ServerListener(), this);
+        this.getServer().getPluginManager().registerEvents(new FriendsListener(), this);
+
+        this.getCommand("friends").setExecutor(new FriendCommands());
+        this.getCommand("f").setExecutor(new FriendCommands());
+        this.getCommand("friend").setExecutor(new FriendCommands());
+        this.getCommand("ami").setExecutor(new FriendCommands());
+        this.getCommand("amis").setExecutor(new FriendCommands());
+
+        this.getCommand("party").setExecutor(new PartyCommands());
+        this.getCommand("p").setExecutor(new PartyCommands());
+        this.getCommand("partie").setExecutor(new PartyCommands());
 
         this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         this.getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new MessageListener());
